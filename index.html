@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main-container">
+      <section class="card-container">
+        <div class="card-images">
+          <div class="back">
+            <div id="display-cvc" class="card-cvs">000</div>
+          </div>
+          <div class="front">
+            <div class="front-card-content">
+              <div class="card-logo">
+                <img src="images/card-logo.svg" alt="Front Card Logo" />
+              </div>
+              <div class="card-number">
+                <p class="card-numbers">0000 &nbsp;&nbsp;0000 &nbsp;&nbsp;0000 &nbsp;&nbsp;0000</p>
+              </div>
+              <div class="card-information">
+                <div class="name">Jane Appleseed</div>
+                <div class="expiration-date">00/0000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="card-content-form">
+        <form>
+          <div class="cardholder-section" id="card-name">
+            <div class="title">cardholder name</div>
+            <input class="name-input" type="text" placeholder="e.g Jane Appleseed" />
+            <div class="err1 error-message"></div>
+          </div>
+          <div class="cardholder-section">
+            <div class="title">card number</div>
+            <input class="number-input" type="password" placeholder="e.g 1234 5678 9123 0000" />
+            <div class="err2 error-message"></div>
+          </div>
+          <div class="more-card-information">
+            <div class="date">
+              <div class="title">exp. date (mm/yy)</div>
+              <div class="input-date">
+                <input class="input-month" type="text" placeholder="MM" />
+                <input class="input-year" type="text" placeholder="YY" />
+              </div>
+              <div class="err3 error-message"></div>
+            </div>
+            <div class="cvc">
+              <div class="title">cvc</div>
+              <input class="input-cvc" type="password" placeholder="e.g 123">
+              <div class="err4 error-message"></div>
+            </div>
+          </div>
+          <button id="confirm-btn">confirm</button>
+        </form>
+      </section>
+      <section class="thank-you-page">
+        <div class="complete-logo">
+          <img src="images/icon-complete.svg" alt="Check Mark">
+        </div>
+        <div class="thank-you-title">
+          Thank you!
+        </div>
+        <div class="thank-you-subtitle">
+          We've added your card details
+        </div>
+        <button id="continue-btn">Continue</button>
+      </section>
+    </main>
+
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+
+  <script src="app-two.js"></script>
+  </body>
+</html>

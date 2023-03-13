@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Active-Input-Border: hsl(249, 99%, 64%) hsl(278, 94%, 30%);
+    --Input-Errors: hsl(0, 100%, 66%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grayish-Violet: hsl(270, 3%, 87%);
+    --Dark-Grayish-Violet: hsl(279, 6%, 55%);
+    --Very-Dark-Violet: hsl(278, 68%, 11%);
+    --Body-Font-Size: 18px;
+
+}
+body{
+    font-family: 'Space Grotesk', sans-serif;
+    height: 100vh;
+}
+
+/* Card Container Styling */
+.main-container{
+    width: 100%;
+    height: 100%;
+}
+.card-container{
+    width: 100%;
+    height: 240px;
+    background: url('images/bg-main-mobile.png') no-repeat center center/ cover;
+    position: relative;
+    margin-bottom: 93px;
+}
+.back{
+    position: absolute;
+    top: 37px;
+    right: 16px;
+    width: 286px;
+    height: 157px;
+    background: url('images/bg-card-back.png') no-repeat center center/ cover;
+}
+.card-cvs{
+    margin-top: 70px;
+    margin-left: 225px;
+    color: white;
+    font-size: 11px;
+}
+.front{
+    position: absolute;
+    top: 126px;
+    left: 20px;
+    width: 286px;
+    height: 157px;
+    background: url('images/bg-card-front.png') no-repeat center center/ cover;
+}
+.front-card-content{
+    margin-left: 20px;
+    margin-top: 17px;
+}
+.card-logo img{
+    width: 58px;
+    height: 30px;
+    margin-bottom: 28px;
+}
+.card-number{
+    color: var(--White);
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+.card-information{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--White);
+    margin-bottom: 21px;
+    font-size: 11px;
+}
+.expiration-date{
+    margin-right: 30px;
+}
+
+/* Card Content Styling */
+.card-content-form{
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
+.cardholder-section{
+    margin-bottom: 17px;
+}
+.title{
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 11px;
+}
+input{
+    width: 100%;
+    padding: 15px 0 11px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--Light-Grayish-Violet);
+    outline: none;
+    font-size: 18px;
+}
+input::placeholder{
+    color: var(--Dark-Grayish-Violet);
+}
+.more-card-information{
+    width: 100%;
+    height: 100px;
+    display: flex; 
+    margin-bottom: 17px;
+}
+.date{
+    width: 50%;
+}
+.input-date{
+    display: flex;
+}
+.input-date input{
+    margin-right: 5px;
+}
+button{
+    width: 100%;
+    padding: 19px 0;
+    font-size: var(--Body-Font-Size);
+    text-transform: uppercase;
+    border: none;
+    border-radius: 14px;
+    background-color: var(--Very-Dark-Violet);
+    color: var(--White);
+    cursor: pointer;
+}
+
+/* Confirm Page Styling */
+
+.thank-you-page{
+    text-align: center;
+    display: none;
+}
+.complete-logo{
+    margin-bottom: 28px;
+}
+.thank-you-title{
+    margin-bottom: 35px;
+}
+.thank-you-subtitle{
+    margin-bottom: 40px;
+    color: var(--Dark-Grayish-Violet);
+}
+.show-me{
+    display: block;
+}
+.none{
+    display: none;
+}
+
+/*  Error Message Styling */
+.error-message{
+    display: block;
+    color: red;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+/* Active Input Styling */
+.active-input{
+    border-color: var(--Active-Input-Border);
+}
+.blank-input{
+    border-color: var(--Input-Errors);
+}
+
+@media screen and (min-width: 1440px) {
+    .main-container{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+    .card-container{
+        background: url('images/bg-main-desktop.png') no-repeat center center/ cover;
+        width: 483px;
+        height: 100%;
+    }
+    .front{
+        width: 447px;
+        height: 245px;
+        left: 164px;
+        top: 100px;
+    }
+   .card-logo img{
+    width: 87px;
+    height: 49px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+   }
+   .card-numbers{
+    font-size: 30px;
+    margin-bottom: 36px;
+   }
+   .card-information{
+    font-size: 18px;
+   }
+    .back{
+        width: 447px;
+        height: 245px;
+        left: 258px;
+        top: 369px;
+    }
+
+    .card-content-form{
+        width: 381px;
+        height: 349px;
+        position: absolute;
+        top: 173px;
+        right: 225px;
+    }
+    .card-cvs{
+        margin-left: 360px;
+        margin-top: 112px;
+        font-size: 17px;
+    }
+    .thank-you-page{
+        position: absolute;
+        left: 1000px;
+        top: 30%;
+    }
+}
